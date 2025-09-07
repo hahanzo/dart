@@ -31,9 +31,7 @@ class Airplane implements Shipper {
     return (distance / speedInKmph).ceil();
   }
 
-  String getAirline() {
-    return airline;
-  }
+  String getAirline() => airline;
 }
 
 class Train implements Shipper {
@@ -95,12 +93,10 @@ class Truck implements Shipper {
     return (distance / speedInKmph).ceil();
   }
 
-  bool isRefrigerated() {
-    return refrigerated;
-  }
+  bool isRefrigerated() => refrigerated;
 }
 
-int main() {
+void main() {
   Airplane airplane = Airplane("Boeing 747", 900, 100000, 5, "SkyCargo");
   Train train = Train("Freight Train", 80, 20000, 50, 2);
   Truck truck = Truck("Big Rig", 60, 20000, 3, true);
@@ -133,6 +129,4 @@ int main() {
     }
     print("");
   }
-
-  return 0;
 }
