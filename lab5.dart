@@ -11,10 +11,12 @@ void main() {
   }
 
   Future<void> doWork() async {
-    print("Початок функції doWork");
+    print("\x1B[32mПочаток функції doWork\x1B[0m");
     try {
       await addTask();
+      print("\x1B[32m");
       trainingCourse.ShowData();
+      print("\x1B[0m");
     }
     catch (e) {
       print("Недопистиме значення: $e");
@@ -24,12 +26,12 @@ void main() {
       if (studentsN == 0) {
         throw Exception("Кількість студентів неможе дорівнювати 0");
       }
-      print("Кількість студентів: $studentsN");
+      print("\x1B[32mКількість студентів: $studentsN\x1B[0m");
     }
     catch (e) {
       print("Сталася помилка: $e");
     }
-    print("Кінець функції doWork");
+    print("\x1B[32mКінець функції doWork\x1B[0m");
   }
 
   doWork();
